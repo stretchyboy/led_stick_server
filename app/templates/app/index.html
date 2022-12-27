@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %} Home {% endblock %}</h1>
+  {% if g.user %}
+  
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<h2>Existing Pages</h2>
+
+<ul>
+  <li><a href="{{ url_for('admin.index') }}">Admin Pages</a></li>
+  <li><a href="{{ url_for('api.doc') }}">API Documentation Pages</a></li>
+  <li><a href="{{ url_for('auth.doc') }}">Auth API Documentation Pages</a></li>
+  <li><a href="/pwa/index.html">PWA</a></li>
+</ul>
+
+{% endblock %}
